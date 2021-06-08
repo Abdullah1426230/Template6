@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+:root {
+    --introEmail: hsl(217, 28%, 15%);
+    --MainBG: hsl(218, 28%, 13%);
+    --FooterBG: hsl(216, 53%, 9%);
+    --testimonialsBG: hsl(219, 30%, 18%);
+    --erroy: hsl(0, 100%, 63%);
+    --CyanGrad: hsl(176, 68%, 64%);
+    --BlueGrad: hsl(198, 60%, 50%);
+    --White: hsl(0, 0%, 100%);
+}
+
+::selection {
+    background-color: black;
+    color: white;
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/*
+=============================================
+     =            Header            =
+=============================================
+*/
+
+header {
+    background-color: var(--introEmail);
+    color: white;
+    padding: 45px 35px 15px;
+}
+
+header .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .links ul li {
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    margin: 0 15px;
+    border-bottom: 2px solid transparent;
+    font-size: 14px;
+}
+
+header .links ul li:hover {
+    border-bottom: 2px solid white;
+}
+
+header .intro {
+    max-width: 800px;
+    /* background-color: aliceblue; */
+    margin: 15px auto;
+}
+
+header .intro img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .intro h1 {
+    text-align: center;
+    margin: 15px auto;
+    font-size: 40px;
+    line-height: 1.5;
+}
+
+header .intro p {
+    max-width: 600px;
+    line-height: 1.4;
+    text-align: center;
+    font-size: 18px;
+    margin: 10px auto;
+}
+
+header .intro button {
+    background-image: linear-gradient(to left, var(--BlueGrad), var(--CyanGrad));
+    display: block;
+    margin: 25px auto;
+    border: 0;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 95%;
+    max-width: 300px;
+    padding: 15px;
+}
+
+header .intro button:hover {
+    background-image: none;
+    background-color: var(--CyanGrad);
+}
+
+
+/*=====  End of Header  ======*/
+
+
+/*=============================================
+=            Section Grid            =
+=============================================*/
+
+section.grid {
+    background-color: var(--MainBG);
+    min-height: 750px;
+    /* max-height: 1500px; */
+}
+
+section .grid-content {
+    display: grid;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff !important;
+    text-align: center;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    grid-template-rows: repeat(2, minmax(300px, 1fr));
+    gap: 20%;
+}
+
+section .grid-content article {
+    /* border: 5px solid #fff; */
+    margin: 0 auto;
+    padding: 15px;
+}
+
+section .grid-content article img {
+    width: 100px;
+}
+
+section .grid-content article h2 {
+    margin: 10px 0;
+}
+
+section .grid-content article p {
+    font-size: 18px;
+    line-height: 1.35;
+}
+
+
+/*=====  End of Section Grid  ======*/
+
+
+/*=============================================
+=            Section class="imgtext"            =
+=============================================*/
+
+.imgtext {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--MainBG);
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
+    padding: 30px;
+}
+
+.imgtext img {
+    max-width: 100%;
+    margin: 10px auto;
+}
+
+.imgtext article {
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.imgtext article h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.imgtext article p {
+    margin: 6px auto;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.imgtext article p.link {
+    display: inline-block;
+    position: relative;
+    color: var(--CyanGrad);
+    border-bottom: 2px solid var(--CyanGrad);
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.imgtext article span:hover {
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+.imgtext article span .icon {
+    margin-left: 10px !important;
+    font-size: 18px;
+}
+
+
+/*=====  End of Section class="imgtext"  ======*/
+
+
+/*=============================================
+=            section class="flex"            =
+=============================================*/
+
+section.flex {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: var(--MainBG);
+    flex-wrap: wrap;
+    padding-bottom: 150px;
+}
+
+section.flex article {
+    min-width: 250px;
+    margin: 25px auto;
+    color: white;
+    border-radius: 8px;
+    background-color: #21293c;
+    max-width: 500px;
+    position: relative;
+    padding: 20px;
+}
+
+section.flex .name {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+section.flex article>p {
+    line-height: 155%;
+}
+
+section.flex .name img {
+    margin-right: 15px;
+}
+
+section.flex .name p {
+    font-size: 12px;
+}
+
+section.flex img {
+    border-radius: 50%;
+    width: 40px;
+}
+
+
+/*=====  End of section class="flex"  ======*/
+
+
+/*=============================================
+=            Section mail            =
+=============================================*/
+
+
+/*=====  End of Section mail  ======*/
+
+.mail {
+    color: white;
+    /* border-radius: 18px; */
+    text-align: center;
+    position: relative;
+    padding: 30px;
+    top: -50%;
+    margin: 0 auto;
+    max-width: 1000px;
+    background-color: var(--introEmail);
+}
+
+.mail h1 {
+    margin: 20px auto;
+    font-size: 38px;
+}
+
+.mail p {
+    max-width: 800px;
+    margin: 10px auto 20px;
+    line-height: 1.5;
+}
+
+.mail .inp {
+    /* display: flex; */
+    flex-wrap: wrap;
+}
+
+.mail input {
+    padding: 15px;
+    /* font-size: 20px; */
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-right: 20px;
+    border: none;
+    margin-top: 10px;
+    outline: 0;
+}
+
+.mail button {
+    background-image: linear-gradient(to right, #4dc5d3, #3dafcd);
+    padding: 15px 20px;
+    font-weight: 700;
+    color: white;
+    margin-top: 10px;
+    border-radius: 16px;
+    border: 0;
+}
+
+
+/*=============================================
+=            Footer            =
+=============================================*/
+
+footer {
+    background-color: var(--FooterBG);
+    padding: 30px;
+    color: white;
+}
+
+footer ul img,
+footer div img {
+    width: 20px;
+    /* display: inline-block; */
+    /* padding-right: 15px; */
+    float: left;
+}
+
+footer>img {
+    width: 150px;
+    margin-bottom: 28px;
+    display: block;
+}
+
+:root {
+    --width: 320px;
+}
+
+footer .link-location {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+footer .location {
+    margin-top: 10px;
+    cursor: pointer;
+    max-width: var(--width);
+    width: 300px;
+}
+
+footer .location p {
+    float: right;
+    max-width: calc(var(--width) - 40px);
+    padding: 0 10px 10px;
+    line-height: 1.55;
+}
+
+footer .contact {
+    margin-top: 10px;
+    max-width: var(--width);
+    width: 300px;
+}
+
+footer .contact span {
+    margin-left: 15px;
+}
+
+footer .contact li {
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+footer .links-1,
+footer .links-2 {
+    max-width: var(--width);
+    width: 300px;
+    margin-top: 10px;
+}
+
+footer .links-1 li,
+footer .links-2 li {
+    margin: 4px 0;
+    cursor: pointer;
+}
+
+footer .icons li {
+    display: inline-block;
+    border-radius: 50%;
+    padding: 5px 9px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: 1px solid #fff;
+}
+
+footer .icons li:hover {
+    border: 1px solid var(--CyanGrad);
+    color: var(--CyanGrad);
+}
+
+
+/*=====  End of Footer  ======*/
+
+
+/*=============================================
+=            Medid Queries            =
+=============================================*/
+
+@media (max-width:768px) {
+    section .grid-content {
+        grid-template-columns: minmax(300px, 1fr);
+        grid-template-rows: repeat(4, minmax(300px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 35px !important;
+    }
+}
+
+@media (max-width:485px) {
+    header {
+        display: block;
+    }
+    header #logo {
+        width: 100px;
+        /* display: block !important; */
+    }
+    header ul {
+        display: none !important;
+    }
+    header span {
+        font-size: 30px;
+        margin-top: -10px;
+        cursor: pointer;
+    }
+    aside {
+        width: 200px;
+        text-transform: capitalize;
+        list-style: none;
+        height: 100vh;
+        background-color: white;
+        color: #000;
+        transition: left .3s;
+        position: fixed;
+        top: 0;
+        left: -200px;
+        bottom: 0;
+        z-index: 5555555;
+    }
+    aside span {
+        margin-left: 10px;
+        font-size: 55px;
+        cursor: pointer;
+    }
+    aside li {
+        padding: 15px;
+        margin: 10px 0;
+        background-color: var(--testimonialsBG);
+        color: white;
+        cursor: pointer;
+        font-size: 25px;
+    }
+}
+
+@media (min-width:486px) {
+    header #logo {
+        width: 176px;
+        height: 51px;
+    }
+    aside,
+    header span {
+        display: none;
+    }
+}
+
+
+/*=====  End of Medid Queries  ======*/
